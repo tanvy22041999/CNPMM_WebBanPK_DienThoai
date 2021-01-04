@@ -1,0 +1,52 @@
+<form class="main-content" (ngSubmit)="onSubmit()" [formGroup]="formCreateUser">
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title">Info User Admin</h4>
+        </div>
+        <div class="card-body">
+            <div id="typography">
+                <div class="row">
+                    <div class="tim-typo">
+                          <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="FName" type="text" id="Fname" formControlName="fName" required>
+                            </mat-form-field>
+                    </div>
+                    <div class="tim-typo">
+                        <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="LName" type="text" id="Lname" formControlName="lName" required>
+                            </mat-form-field>
+                    </div>
+                    <div class="tim-typo">
+                        <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email" type="text" id="Email" formControlName="email"required>
+                            </mat-form-field>
+                    </div>
+                     <div class="tim-typo">
+                        <mat-form-field class="example-full-width">
+                                    <input type="password" matInput placeholder="PassWord" id="psw" formControlName="password" required >
+                         </mat-form-field>
+                    </div>
+                    <div class="tim-typo">
+                        <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Gender" type="text" id="Gender" formControlName="gender" required>
+                            </mat-form-field>
+                    </div>
+                    <div class="tim-typo">
+                        <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Birthday" type="text" id="Birthday" formControlName="birthday" required>
+                            </mat-form-field>
+                    </div>
+                   
+                    <div class="tim-typo">
+                         <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="phone" type="text" id="Phone" formControlName="phone" required >
+                          </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button  class="btn btn-info">new admin</button>   
+</form>

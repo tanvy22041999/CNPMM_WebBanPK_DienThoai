@@ -1,0 +1,17 @@
+<div class="login-page">
+    <div class="form">
+      <form class="register-form"  >
+        <input type="text" placeholder="name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="#">Đăng Nhập</a></p>
+      </form>
+      <form class="login-form" (ngSubmit)="onSubmit()" [formGroup] ="formLogin">
+        <input type="text" placeholder="email" formControlName="email"/>
+        <input type="password" placeholder="password" formControlName="password"/>
+        <button>Đăng Nhập</button>
+        <p class="message">Chưa Có Tài Khoản? <a routerLink="/register">Tạo Tài Khoản</a></p>
+      </form>
+    </div>
+</div> 

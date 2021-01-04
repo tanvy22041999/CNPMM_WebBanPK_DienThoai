@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit();" [formGroup]="formRegister">
+    <div class="container">
+      <h1>Đăng Ký</h1>
+      <p>Vui lòng nhập thông tin bên dưới để đăng ký.</p>
+      <hr>
+      <label for="fname"><b>Fname</b></label>
+      <input type="text" placeholder="Enter Fname" name="Fname" id="Fname" formControlName="fName" required>
+
+      <label for="lname"><b>Lname</b></label>
+      <input type="text" placeholder="Enter Lname" name="Lname" id="Lname" formControlName="lName" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" id="email" formControlName="email"required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw"formControlName="password" required>
+    
+      <label for="gender"><b>gender</b></label>
+      <input type="text" placeholder="Enter  gender" name="gender" id="gender" formControlName="gender" required>
+
+      <label for="Birthday"><b>Birthday</b></label>
+      <input type="text" placeholder="Enter Birthday" name="Birthday" id="Birthday" formControlName="birthday" required>
+      <label for="Phone"><b>Phone</b></label>
+      <input type="text" placeholder="Enter Phone" name="Phone" id="Phone" formControlName="phone"required>
+      <hr>
+      <p>Bằng cách tạo tài khoản, bạn đồng ý với Điều khoản <a routerLink="/home">& Quyền riêng tư của chúng tôi.</a>.</p>
+      <button class="registerbtn">Đăng Ký</button>
+    </div>
+  
+    <div class="container signin">
+      <p>Bạn đã có tài khoản? <a routerLink="/login">Đăng Nhập</a>.</p>
+    </div>
+  </form>
+  <router-outlet></router-outlet>

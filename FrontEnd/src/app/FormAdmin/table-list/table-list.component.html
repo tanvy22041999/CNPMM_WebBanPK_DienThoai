@@ -1,0 +1,113 @@
+<body>
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Product </h4>
+                      <p class="card-category">Info Product</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Name
+                                  </th>
+                                  <th>
+                                      Price
+                                  </th>
+                                  <th>
+                                     Quantity
+                                  </th>
+                                  <th>
+                                      des
+                                  </th>
+                                  <th>
+                                    images
+                                </th>
+                              </thead>
+                              <tbody>
+                                  <ng-container *ngFor= "let product of products">
+                                  <tr>
+                                      <td>
+                                        <mat-form-field class="id">
+                                            <input matInput placeholder="id" value="{{ product._id }}"type="text"readonly >
+                                        </mat-form-field>
+                                      </td>
+                                      <td>
+                                         <mat-form-field class="name">
+                                            <input matInput placeholder="Name" value="{{ product.name }}"type="text" >
+                                          </mat-form-field>
+                                      </td>
+                                      <td>
+                                        <mat-form-field class="Price">
+                                            <input matInput placeholder="Price" value="{{ product.price }}" type="text">
+                                          </mat-form-field>
+                                      </td>
+                                      <td>
+                                          <mat-form-field class="Quantity">
+                                            <input matInput placeholder="Quantity" value="{{ product.quantity }}"  type="text"readonly>
+                                          </mat-form-field>
+                                      </td>
+                                      <td> 
+                                            <mat-form-field class="des">
+                                            <input matInput placeholder="des" value="{{ product.des }}" type="text" readonly>
+                                            </mat-form-field>
+                                      </td>
+                                      <td>  
+                                          <a class="nav-link" matTooltip="Images ProDuct" [matTooltipPosition]="'above'" href="http://localhost:2000/products/">
+                                          <!--<i class="material-icons" [href]="product.image" >dashboard</i> -->
+                                        </a>
+                                       </td>
+                                       
+                                   <td>
+                                    <button onclick="myFunctionn()" mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                        <i class="material-icons">edit</i>
+                                        </button>
+                                       
+                                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                        <i class="material-icons">close</i>
+                                        </button>
+
+                                    </td>
+                                  </tr>
+                                </ng-container>
+                                
+                                 </tbody>
+                                 
+                          </table>
+                            <form (ngSubmit)="onSubmit()" [formGroup]="formProduct">
+                                          
+                                          <input placeholder="Name" type="text"  formControlName="name" required>
+                                          <input placeholder="Price"  type="text" formControlName="price" required>
+                                          <input placeholder="Quantity"   type="text"formControlName="quantity" required>
+                                          <input placeholder="des"  type="text" formControlName="des" required>
+                                          <div>
+
+                                          
+                                          <form action="/action_page.php">
+                                            <input type="file" id="myFile" name="filename" formControlName="image" >
+                                            <input type="submit">
+                                          </form>
+                                        </div>
+                                <button onclick="myFunctionn()" class="btn btn-primary" > >Add ProDuct</button>
+                            </form>
+                             
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<script>
+  function myFunctionn() {
+    alert("successful update profile");
+  }
+  </script>
+    </body>
